@@ -48,16 +48,14 @@ public class linearPrograms {
         int HH, MM, SS;
         System.out.println("Всего секунд: " + T);
         HH = T / 3600;
-        System.out.println(HH + " часа(ов)");
         MM = (T % 3600) / 60;
-        System.out.println(MM + " минут(ы)");
         SS = T % 60;
-        System.out.println(SS + " секунд(ы)");
+        System.out.println(HH + "ч. " + MM + "мин. " + SS + "с.");
 
         //Task6 Для данной области составить линейную программу
         Scanner scanner = new Scanner(System.in);
         int xx, yy;
-        System.out.println("Введите координаты точки: х и у :  ");
+        System.out.println("Введите координаты точки х и у через ENTER:  ");
         xx = scanner.nextInt();
         yy = scanner.nextInt();
         if (yy < 4 && yy > -3 || xx < 4 && xx > -4) {
