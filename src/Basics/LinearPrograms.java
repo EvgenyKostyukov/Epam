@@ -2,7 +2,7 @@ package Basics;
 
 import java.util.Scanner;
 
-public class linearPrograms {
+public class LinearPrograms {
     public static void main(String[] args) {
 
         //Task 1   Найдите  значение функции
