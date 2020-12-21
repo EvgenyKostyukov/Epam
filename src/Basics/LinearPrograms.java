@@ -52,7 +52,7 @@ public class LinearPrograms {
         SS = T % 60;
         System.out.println(HH + "ч. " + MM + "мин. " + SS + "с.");
 
-        //Task6 Для данной области составить линейную программу
+        //Task6 111Для данной области составить линейную программу
         Scanner scanner = new Scanner(System.in);
         int xx, yy;
         System.out.println("Введите координаты точки х и у через ENTER:  ");
