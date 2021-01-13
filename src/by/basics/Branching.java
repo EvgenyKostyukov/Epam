@@ -31,26 +31,16 @@ public class Branching {
         System.out.println("Maximum from minimum: " + maxNumber);
 
         //Task3
-        System.out.println("Enter coordinates dot A:");
-        System.out.println("Enter x1 ");
+        System.out.println("Enter the coordinates of the three points with ENTER (six numbers) x and y: ");
         int x1Task3 = scanner.nextInt();
-        System.out.println("Enter y1");
         int y1Task3 = scanner.nextInt();
-        System.out.println("Enter coordinates dot B:");
-        System.out.println("Enter x2 ");
         int x2Task3 = scanner.nextInt();
-        System.out.println("Enter y2");
         int y2Task3 = scanner.nextInt();
-        System.out.println("Enter coordinates dot C:");
-        System.out.println("Enter x3 ");
         int x3Task3 = scanner.nextInt();
-        System.out.println("Enter y3");
         int y3Task3 = scanner.nextInt();
-        if (x1Task3 == x2Task3 && x1Task3 == x3Task3)
-            System.out.println("All dots is on one line");
-        else if (y1Task3 == y2Task3 && y1Task3 == y3Task3) {
-            System.out.println("All dots is on one line");
-        } else System.out.println("Dots don't is on one line");
+        if ((x1Task3-x2Task3)*(y1Task3-y3Task3)==(x1Task3-x3Task3)*(y1Task3-y2Task3)) {
+            System.out.println("The points are located on one straight line!");
+        } else System.out.println("The points are NOT on the same straight line!");
 
         //Task4
         System.out.println("Enter dimensions A, B of rectangular hole: ");
