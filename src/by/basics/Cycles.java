@@ -43,16 +43,12 @@ public class Cycles {
         System.out.println(sumTask3);
 
         //Task4
-        System.out.println("Enter x");
-        int xTask4 = scanner.nextInt();
-        System.out.println("Enter y");
-        int yTask4 = scanner.nextInt();
-        if (-4 <= xTask4 && xTask4 <= 4 && -3 <= yTask4 && yTask4 <= 0) {
-            System.out.println("The point into shape");
-        } else if (-2 <= xTask4 && xTask4 <= 2 && 0 <= yTask4 && yTask4 <= 4) {
-            System.out.println("The point into shape");
-        } else
-            System.out.println("The point outer the shape");
+        long s = 1 ;
+        for (int i = 1; i <= 200; i++) {
+            s =s*(i*i);
+            System.out.println("s " + s);
+        }
+        System.out.println("Sum is " + s);
 
         //Task5
         String allSymbols = "` 1234567890-=qwertyuiop[]asdfghjkl;'\\ zxcvbnm,./йцукенгшщзхъфывапролджэячсмитьбю./ *-";
