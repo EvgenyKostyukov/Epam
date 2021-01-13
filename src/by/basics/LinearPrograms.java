@@ -54,14 +54,16 @@ public class LinearPrograms {
 
         //Task6
         Scanner scanner = new Scanner(System.in);
-        int xx, yy;
-        System.out.println("Enter the coordinates of the point x and y with ENTER:  ");
-        xx = scanner.nextInt();
-        yy = scanner.nextInt();
-        if ((yy < 4  && yy > -3) && (xx < 4 && xx > -4)) {
-            System.out.println("true");
-        } else {
-            System.out.println("false");
+        System.out.println("Enter x");
+        int coordinateX = scanner.nextInt();
+        System.out.println("Enter y");
+        int coordinateY = scanner.nextInt();
+        if (-4 <= coordinateX && coordinateX <= 4 && -3 <= coordinateY && coordinateY <= 0 ){
+            System.out.println("The point into shape");
         }
+        else if (-2 <=coordinateX && coordinateX <= 2 && 0 <= coordinateY && coordinateY <= 4  ){
+            System.out.println("The point into shape");
+        } else
+            System.out.println("The point outer the shape");
     }
 }
