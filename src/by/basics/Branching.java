@@ -31,18 +31,26 @@ public class Branching {
         System.out.println("Maximum from minimum: " + maxNumber);
 
         //Task3
-        System.out.println("Enter the coordinates of the three points using ENTER (six numbers) x and y: ");
-        int x1 = scanner.nextInt();
-        int y1 = scanner.nextInt();
-        int x2 = scanner.nextInt();
-        int y2 = scanner.nextInt();
-        int x3 = scanner.nextInt();
-        int y3 = scanner.nextInt();
-        if ((x3 - x1) / (x2 - x1) == (y3 - y1) / (y2 - y1) || ((x1 == x2 || y1 == y2))) {
-            System.out.println("The points are on one straight line!");
-        } else {
-            System.out.println("The points are NOT on the same straight line!");
-        }
+        System.out.println("Enter coordinates dot A:");
+        System.out.println("Enter x1 ");
+        int x1Task3 = scanner.nextInt();
+        System.out.println("Enter y1");
+        int y1Task3 = scanner.nextInt();
+        System.out.println("Enter coordinates dot B:");
+        System.out.println("Enter x2 ");
+        int x2Task3 = scanner.nextInt();
+        System.out.println("Enter y2");
+        int y2Task3 = scanner.nextInt();
+        System.out.println("Enter coordinates dot C:");
+        System.out.println("Enter x3 ");
+        int x3Task3 = scanner.nextInt();
+        System.out.println("Enter y3");
+        int y3Task3 = scanner.nextInt();
+        if (x1Task3 == x2Task3 && x1Task3 == x3Task3)
+            System.out.println("All dots is on one line");
+        else if (y1Task3 == y2Task3 && y1Task3 == y3Task3) {
+            System.out.println("All dots is on one line");
+        } else System.out.println("Dots don't is on one line");
 
         //Task4
         System.out.println("Enter dimensions A, B of rectangular hole: ");
@@ -64,13 +72,15 @@ public class Branching {
         }
 
         //Task5
-        System.out.println("Enter the x value with ENTER: ");
+        System.out.println(" Enter x ");
         double xTask5 = scanner.nextDouble();
+        double gTask5, zTask5;
         if (xTask5 <= 3) {
-            double result = Math.pow(xTask5, 2) - (3 * xTask5) + 9;
-            System.out.println(result);
-        } else {
-            System.out.println((1 / (Math.pow(xTask5, 3) + 6)));
+            zTask5 = Math.pow(xTask5, 2) - 3 * xTask5 + 9;
+            System.out.printf("Result 1: %.1f ", zTask5);
+        } else if (xTask5 > 3) {
+            gTask5 = 1 / (Math.pow(xTask5, 3) + 6);
+            System.out.printf("Result 2: %.1f ", gTask5);
         }
     }
 }

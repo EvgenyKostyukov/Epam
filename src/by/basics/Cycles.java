@@ -1,6 +1,5 @@
 package by.basics;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Cycles {
@@ -17,20 +16,23 @@ public class Cycles {
         System.out.println(sum);
 
         //Task2
-        double a = 1;
-        double b = 10;
-        double h = 2;
-        double x = 1;
-        int i = 1;
-        double F = 1;
-        while (x <= b) {
-            x = i * h + a;
-            if (Math.cos(x) == 0) {
-                System.out.println(x + " do not divide by zero!");
-            } else {
-                F = x / Math.cos(x);
-                System.out.println(x + " " + F);
-            }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter start line A");
+        int aTask2 = scanner.nextInt();
+        System.out.println("Enter finish line B");
+        int bTask2 = scanner.nextInt();
+        System.out.println("Enter step h");
+        double hTask2 = scanner.nextDouble();
+        System.out.println("Enter the value of x");
+        int xTask2 = scanner.nextInt();
+        int yTask2;
+
+        for (double i = aTask2; i <= bTask2; i = i + hTask2) {
+            if (xTask2 > 2) {
+                yTask2 = xTask2;
+            } else
+                yTask2 = -xTask2;
+            System.out.println("x = " + xTask2 + "\n" + "y = " + yTask2);
         }
 
         //Task3
@@ -41,11 +43,16 @@ public class Cycles {
         System.out.println(sumTask3);
 
         //Task4
-        int nTask4 = 200, sumTask4 = 1;
-        for (int iTask4 = 1; iTask4 <= nTask4; iTask4++) {
-            sumTask4 *= Math.pow(iTask4, 2);
-        }
-        System.out.println(sumTask4);
+        System.out.println("Enter x");
+        int xTask4 = scanner.nextInt();
+        System.out.println("Enter y");
+        int yTask4 = scanner.nextInt();
+        if (-4 <= xTask4 && xTask4 <= 4 && -3 <= yTask4 && yTask4 <= 0) {
+            System.out.println("The point into shape");
+        } else if (-2 <= xTask4 && xTask4 <= 2 && 0 <= yTask4 && yTask4 <= 4) {
+            System.out.println("The point into shape");
+        } else
+            System.out.println("The point outer the shape");
 
         //Task5
         String allSymbols = "` 1234567890-=qwertyuiop[]asdfghjkl;'\\ zxcvbnm,./йцукенгшщзхъфывапролджэячсмитьбю./ *-";
@@ -58,20 +65,21 @@ public class Cycles {
         }
 
         //Task6
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter two natural numbers with ENTER: ");
-        int number1Task6 = scanner.nextInt();
+        System.out.println("Enter start of line numbers m ");
+        int mTask6 = scanner.nextInt();
+        System.out.println("Enter end of line numbers n ");
         int nTask6 = scanner.nextInt();
-        int xx = number1Task6 - nTask6;
-        int count = 0;
-        for (int iTask6 = 1; iTask6 <= xx; iTask6++) {
-            if ((xx % iTask6) == 0) {
-                count++;
-                System.out.print(iTask6 + " ");
+
+        while (mTask6 <= nTask6) {
+            System.out.print("\n number: " + mTask6);
+            System.out.print(" its dividers: ");
+            for (int iTask6 = 2; iTask6 <= mTask6 - 1; iTask6++) {
+                if (mTask6 % iTask6 == 0) {
+                    System.out.print(iTask6 + ",");
+                }
             }
+            mTask6 = mTask6 + 1;
         }
-        System.out.println();
-        System.out.println("Number of dividers - " + count);
 
         //Task7
         int[] arr = new int[10];
