@@ -43,12 +43,13 @@ public class Cycles {
         System.out.println(sumTask3);
 
         //Task4
-        long sTask4 = 1 ;
+        int sTask4;
+        int task4number = 1;
         for (int i = 1; i <= 200; i++) {
-            sTask4 =sTask4*(i*i);
-            System.out.println("number " + sTask4);
+            sTask4 = task4number * (i * i);
+            System.out.println("number squared = " + sTask4);
         }
-        System.out.println("Sum is " + sTask4);
+
 
         //Task5
         String allSymbols = "` 1234567890-=qwertyuiop[]asdfghjkl;'\\ zxcvbnm,./йцукенгшщзхъфывапролджэячсмитьбю./ *-";
