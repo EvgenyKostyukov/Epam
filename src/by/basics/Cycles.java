@@ -43,12 +43,15 @@ public class Cycles {
         System.out.println(sumTask3);
 
         //Task4
-        int sTask4;
-        int task4number = 1;
+        long totalNumber=0;
+        int squaredResult;
+        int simpleVariable = 1;
         for (int i = 1; i <= 200; i++) {
-            sTask4 = task4number * (i * i);
-            System.out.println("number squared = " + sTask4);
+            squaredResult = simpleVariable * (i * i);
+            System.out.println("number squared = " + squaredResult);
+            totalNumber = totalNumber+squaredResult;
         }
+        System.out.println("Total num = " + totalNumber);
 
 
         //Task5
