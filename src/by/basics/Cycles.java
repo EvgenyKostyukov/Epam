@@ -1,5 +1,6 @@
 package by.basics;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Cycles {
@@ -43,15 +44,17 @@ public class Cycles {
         System.out.println(sumTask3);
 
         //Task4
-        long totalNumber=0;
-        int squaredResult;
-        int simpleVariable = 1;
-        for (int i = 1; i <= 200; i++) {
-            squaredResult = simpleVariable * (i * i);
+        BigInteger totalMultiplication= new BigInteger("1");
+        BigInteger squaredResult;
+        BigInteger simpleVariable = new BigInteger("1");
+        for (BigInteger i = BigInteger.ONE;i.compareTo(new BigInteger("200"))<=0;
+             i=i.add(BigInteger.ONE)) {
+            squaredResult = simpleVariable.multiply (i.multiply(i)) ;
             System.out.println("number squared = " + squaredResult);
-            totalNumber = totalNumber+squaredResult;
+            totalMultiplication = squaredResult.multiply(totalMultiplication);
         }
-        System.out.println("Total num = " + totalNumber);
+        System.out.println("Total num = " + totalMultiplication);
+
 
 
         //Task5
